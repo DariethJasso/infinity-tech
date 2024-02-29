@@ -1,7 +1,8 @@
-import { faMicrochip, faUser, faList } from "@fortawesome/free-solid-svg-icons"
+import { faMicrochip, faRightFromBracket } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Link from "next/link"
 import NavLinks from "./nav-links";
+import { redirect } from "next/dist/server/api-utils";
 
 
 
@@ -24,12 +25,14 @@ export default function SideNav() {
            action={async () => {
             'use server';
             await signOut();
-          }}>
-            <button className="flex h-[48px] w-full grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3">
-              <PowerIcon className="w-6" />
-              <div className="hidden md:block">Sign Out</div>
+          }}> */}
+            <button className="flex h-[48px] w-full grow items-center justify-center text-gray-500 gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3">
+              <FontAwesomeIcon icon={faRightFromBracket} className="text-gray-500 w-6" />
+              <div className="hidden md:block" >
+                <Link href="../main">Sign Out</Link>
+              </div>
             </button>
-          </form> */}
+          {/* </form> */}
         </div>
       </div>
     );

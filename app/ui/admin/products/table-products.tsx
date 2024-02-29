@@ -23,12 +23,12 @@ export default async function TableProducts() {
             products.map((product) => (
               <tr key={product.id}>
                 <td>
-                  <img src={product.image} alt={product.name} width={50} height={50} />
+                  <img src={product.image} alt={product.name} width={50} height={50} className="rounded-2xl" />
                 </td>
                 <td>{product.name}</td>
                 <td>{product.description}</td>
                 <td>{product.quantity}</td>
-                <td>${product.price}.00</td>
+                <td>${product.price}</td>
               </tr>
             ))
           }

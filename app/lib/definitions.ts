@@ -13,3 +13,4 @@ export type Soons={
     name: string,
     image : string
 }
+

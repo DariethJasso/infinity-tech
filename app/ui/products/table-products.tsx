@@ -3,6 +3,7 @@ import React, { Suspense } from "react";
 import {Card, CardBody, CardFooter, Image} from "@nextui-org/react";
 import { fetchProducts } from "@/app/lib/data";
 import SkeletonProducts from "../skeletons/skeletonProducts";
+import ModalInfo from "./modalInfo";
 
 export default async function TableProducts() {
   const products = await fetchProducts();
@@ -23,9 +24,15 @@ export default async function TableProducts() {
               src={item.image}
             />
           </CardBody>
-          <CardFooter className="text-small justify-between">
-            <b>{item.name}</b>
-            <p className="text-default-500">{item.price}</p>
+          <CardFooter className="text-small justify-between flex flex-col">
+            <div>
+
+              <b>{item.name}</b>
+              <p className="text-default-500">{item.price}</p>
+            </div>
+            <div>
+              <ModalInfo name={item.name} price={item.price} image={item.image} description={item.description}/>
+            </div>
           </CardFooter>
         </Card>
       ))}

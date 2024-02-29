@@ -1,5 +1,5 @@
 import {sql} from "@vercel/postgres";
-import { Products,Soons } from "./definitions";
+import { Products,Soons,Comments } from "./definitions";
 export async function fetchProducts() {
     try {
         await new Promise(resolve => setTimeout(resolve, 3000));
@@ -7,16 +7,29 @@ export async function fetchProducts() {
         return data.rows
     } catch (error) {
         console.error('Database Errror:',error);
-        throw new Error('Failed to fetch Products');
+        throw new Error('Failed to fetch Products;');
     }
 }
 
 export async function fetchSoon(){
     try {
-        const data = await sql<Soons>`SELECT * FROM soon`;	
+        const data = await sql<Soons>`SELECT * FROM soon;`;	
         return data.rows
     }catch(error){
         console.error('Database Errror:',error);
         throw new Error('Failed to fetch Soons');
+    }
+}
+
+export async function fetchComments(){
+    try {
+        
+        const data = await sql<Comments>`SELECT * FROM comments;`;
+        console.log(data.rows)
+        return data.rows
+    }
+    catch(error){
+        console.error('Database Errror:',error);
+        throw new Error('Failed to fetch Comments');
     }
 }

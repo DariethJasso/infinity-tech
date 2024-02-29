@@ -47,13 +47,11 @@ export default function Contact() {
             <Divider className="my-3"/>
             <section className="w-auto"> 
                 <h1 className="text-2xl font-bold text-center">Coments</h1>
-                <div className="flex flex-col gap-4 items-center py-3 sm:flex-row sm:flex-wrap sm:justify-center ">
-                    <CommentCard name="Steve Griffin" comment="I love the new features in this app. I can't wait to see what else I can do with it." img="https://i.pravatar.cc/300"/>
-                    <CommentCard name="Steve Smith" comment="I love the new features in this app. I can't wait to see what else I can do with it." img="https://i.pravatar.cc/300"/>
-                    <CommentCard name="Darieth Jasso" comment="I love the new features in this app. I can't wait to see what else I can do with it." img="https://i.pravatar.cc/300"/>
-                    <CommentCard name="Darieth Jasso" comment="I love the new features in this app. I can't wait to see what else I can do with it." img="https://i.pravatar.cc/300"/>
-                    <CommentCard name="Darieth Jasso" comment="I love the new features in this app. I can't wait to see what else I can do with it." img="https://i.pravatar.cc/300"/>
-                </div>
+                    <div className="flex flex-col gap-4 items-center py-3 sm:flex-row sm:flex-wrap sm:justify-center ">
+                    <CommentCard />
+
+                    </div>
+                
             </section>
         </div>
     );

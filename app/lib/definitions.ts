@@ -14,3 +14,12 @@ export type Soons={
     image : string
 }
 
+export type Comments ={
+    id: string,
+    name: string,
+    date: string
+    email: string,
+    image: string,
+    comment: string
+
+}

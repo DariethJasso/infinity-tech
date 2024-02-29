@@ -188,10 +188,47 @@ const soon=[
   }
 ];
 
+const comments=[
+  {
+      id: "1d40a3e5-69cb-4a10-b456-af098d9e5d37",
+      name: "Darieth Jasso",
+      date:"27-01-2023",
+      email: "kUxuL@example.com",
+      image: "https://avatars.githubusercontent.com/u/1048340?v=4",
+      comment:"Muy bueno la compra",
+  },
+  {
+      id: "7b62d97a-208b-44f1-85d3-d714f6ac914d",
+      name: "Pedro Mena",
+      date:"04-02-2023",
+      email: "pedro@gmail.com",
+      image: "https://avatars.githubusercontent.com/u/1048340?v=4",
+      comment:"Muy bueno la vida",
+      
+  },
+  {
+      id: "91e6f91f-23cc-45d6-94d4-ee1c1c342c1d",
+      name: "Cristian Vega",
+      date:"10-02-2023",
+      email: "cristian@gmail.com",
+      image: "https://avatars.githubusercontent.com/u/1048340?v=4",
+      comment:"Muy bueno la vida",
+
+  },
+  {
+      id: "f52e80a4-cf62-468d-9462-52aa517779d2",
+      name: "Dilsia Milaida",
+      date:"11-02-2023",
+      email: "dilsia@gmail.com",
+      image: "https://avatars.githubusercontent.com/u/1048340?v=4",
+      comment:"Muy bueno la vida",
+  }
+]
 
       
 
 module.exports ={
     products,
-    soon
+    soon,
+    comments
 };

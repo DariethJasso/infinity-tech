@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/hook/ModeProvider.jsx", "app/ui/darkmode/MoonIcon.jsx", "app/ui/darkmode/DarkMode.jsx", "app/ui/main/Carousel.jsx", "app/ui/products/modalInfo.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/hook/ModeProvider.jsx", "app/ui/darkmode/MoonIcon.jsx", "app/ui/darkmode/DarkMode.jsx", "app/ui/main/Carousel.jsx", "app/ui/products/modalInfo.tsx"],
   "exclude": ["node_modules"]
 }

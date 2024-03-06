@@ -1,13 +1,37 @@
-
-import React, { Suspense } from "react";
+'use client'
+import React, { Suspense, use, useEffect,useState } from "react";
 import {Card, CardBody, CardFooter, Image} from "@nextui-org/react";
 import { fetchProducts } from "@/app/lib/data";
 import SkeletonProducts from "../skeletons/skeletonProducts";
 import ModalInfo from "./modalInfo";
+import { Products } from "@/app/lib/definitions";
+import { useData } from "@/app/hook/useData";
 
-export default async function TableProducts() {
-  const products = await fetchProducts();
+export default function TableProducts() {
 
+
+  const {products} = useData();
+  // const [product, setProduct] = useState<Products[]>([]);
+  // useEffect(() => {
+
+  //   const fetchData = async () => {
+  //     try {
+        
+  //       const products= await fetchProducts();
+        
+  //       setProduct(products);
+
+
+  //     }
+  //     catch(error){
+  //       console.error('Database Errror:',error);
+  //     }
+  //   }
+  //   fetchData();
+  // },[]);
+  
+
+  
   return (
     <div className="gap-2 grid grid-cols-2 sm:grid-cols-4">
       {products.map((item, index) => (
@@ -30,12 +54,12 @@ export default async function TableProducts() {
               <b>{item.name}</b>
               <p className="text-default-500">{item.price}</p>
             </div>
-            <div>
-              <ModalInfo name={item.name} price={item.price} image={item.image} description={item.description}/>
-            </div>
+            <ModalInfo name={item.name} description={item.description} price={item.price} image={item.image} rating={item.rating}/>
           </CardFooter>
         </Card>
       ))}
     </div>
   );
+
+  
 }

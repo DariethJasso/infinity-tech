@@ -1,11 +1,12 @@
 export type Products={
-    id: string,
+    idproducts: string,
     name: string,
     description: string,
     quantity: number,
-    image: string,
     price: number,
+    rating: number
     category: string
+    image: string,
 }
 
 export type Soons={

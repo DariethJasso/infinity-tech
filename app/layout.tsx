@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { montserrat } from "./ui/font";
 import Providers from "./providers";
+import { DataProvider } from "./context/DataProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -19,13 +20,17 @@ export default function RootLayout({
   return (
     
 
-      <html lang="en">
+
+      <DataProvider>
+        <html lang="en">
         <body className={montserrat.className}>
           <Providers>
             <div className='dark text-foreground bg-background'>{children}</div>
           </Providers>
         </body>
       </html>
+      </DataProvider>
+   
     
   );
 }

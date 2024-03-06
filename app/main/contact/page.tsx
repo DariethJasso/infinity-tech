@@ -19,7 +19,7 @@ export default function Contact() {
                         />
                     <Input
                         isRequired
-                        type="email"
+                        type="number"
                         label="Phone"
                         defaultValue="311-555-5555"
                         className="max-w-xs"
@@ -38,7 +38,7 @@ export default function Contact() {
                         placeholder="Enter your comment"
                         className="max-w-xs"
                         />
-                        <Button color="primary" variant="ghost" className="font-semibold text-[20px]">
+                        <Button color="primary" variant="ghost" className="font-semibold text-[20px]" type="submit">
                             <FontAwesomeIcon icon={faPaperPlane} /> Send
                         </Button> 
                     

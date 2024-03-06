@@ -75,7 +75,7 @@ export default function NavBar() {
 
       <NavbarContent justify="end">
         <NavbarItem className="hidden md:flex">
-          <Link href="/admin">Login</Link>
+          <Link href="">Login</Link>
         </NavbarItem>
         <NavbarItem>
           <Button as={Link} color="primary" href="#" variant="flat">

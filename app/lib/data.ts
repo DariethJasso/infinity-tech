@@ -1,9 +1,11 @@
 import {sql} from "@vercel/postgres";
 import { Products,Soons,Comments } from "./definitions";
+
 export async function fetchProducts() {
     try {
-        await new Promise(resolve => setTimeout(resolve, 3000));
+        sql.connect();
         const data = await sql<Products>`SELECT * FROM products`;
+        console.log(data.rows)
         return data.rows
     } catch (error) {
         console.error('Database Errror:',error);

@@ -49,7 +49,7 @@ export default async function Home()
           <Image  
           isBlurred
           
-          src="https://imgs.search.brave.com/gWvOTZezHyW4OemRApZuwFtGaYPczp6sKRLOZbx8nkQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvZmVhdHVy/ZWQvZ2FtaW5nLW1v/ZHMtYngydXc2Y2ox/NHRwam04di5qcGc"
+          src="https://imgs.search.brave.com/TyeOcub3NFbSvL6IEKJrl4QJW3bV3fvN7kQ7vdj2bJ8/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvZmVhdHVy/ZWQvaGFsby1pbmZp/bml0ZS1waWN0dXJl/cy13dWhpZHJveTdr/MzhmbnoyLmpwZw"
           alt="NextUI Album Cover"
           className="m-5 2xl:h-[200px] 2xl:w-[300px] "/>
         </div>

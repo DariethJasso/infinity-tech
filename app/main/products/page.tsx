@@ -12,13 +12,9 @@ export default function Products(){
         <div className="px-2 py-3 h-auto">
                 <Divider className="my-3"/>
             <div className="flex flex-col lg:flex-row-reverse lg:gap-4 lg:justify-center">
-                <div className="flex flex-col items-end">
-                    <h1 className="text-2xl font-bold">Product List</h1>
-                    <div className="flex gap-3" >
-                        <Search/>
-                    </div>
+                <div className="flex justify-center py-3">
+                    <h1 className="font-bold text-3xl">PRODUCTS</h1>
                 </div>
-                <Divider className="my-3 lg:hidden"  />
                 <div>
                     <Suspense fallback={<div className="flex justify-center w-full h-[600px]"><Spinner size="lg" color="primary"/></div>}>
 

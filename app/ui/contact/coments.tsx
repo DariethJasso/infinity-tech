@@ -11,7 +11,7 @@ export default async function CommentCard() {
       {
       comments.map(item => {
         return (
-          <div key={item.id}>
+          <div key={item.id} >
             <Card className="max-w-[350px] sm:w-[320px] lg:w-[300px]">
               <CardHeader className="flex gap-3">
                 <Image

@@ -70,8 +70,7 @@ export default async function Home()
       </section>
       <Divider className='my-3'/>
       <section>
-        <h1 className='text-3xl font-bold text-center pb-3'>Ubicacion</h1>
-          <Mapa/>
+        
       </section>
     </div>
   )

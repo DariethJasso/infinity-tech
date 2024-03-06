@@ -3,7 +3,7 @@ import { faFaceMeh } from "@fortawesome/free-solid-svg-icons";
 import {faTwitter,faFacebook,faInstagram} from "@fortawesome/free-brands-svg-icons";
 export default function Footer() {
     return (
-        <footer className="text-center">
+        <footer className="text-center xl:h-full">
             <div>
                 <div>
                     <h1>

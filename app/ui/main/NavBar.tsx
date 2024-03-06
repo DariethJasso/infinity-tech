@@ -1,10 +1,11 @@
 'use client'
 import React from "react";
-import {Navbar, NavbarBrand, NavbarMenuToggle, NavbarMenuItem, NavbarMenu, NavbarContent, NavbarItem, Button} from "@nextui-org/react";
+import {Navbar, NavbarBrand, NavbarMenuToggle, NavbarMenuItem, NavbarMenu, NavbarContent, NavbarItem, Button, Badge} from "@nextui-org/react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMicrochip, faHome, faList,faPhone } from '@fortawesome/free-solid-svg-icons';
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Cart from "./cart";
 
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -36,20 +37,20 @@ export default function NavBar() {
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
     >
-      <NavbarContent className="sm:hidden" justify="start">
+      <NavbarContent className="md:hidden" justify="start">
         <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} />
       </NavbarContent>
 
-      <NavbarContent className="sm:hidden pr-3" justify="center">
+      <NavbarContent className="md:hidden pr-3" justify="center">
         <NavbarBrand>
-          <FontAwesomeIcon className="pr-3 text-3xl " icon={faMicrochip} />
+          <FontAwesomeIcon className="pr-3 text-3xl" icon={faMicrochip} />
           
           {/* <AcmeLogo /> */}
-          <p className="font-bold text-inherit">Infinity Tech</p>
+          <p className="font-bold text-inherit hidden sm:flex ">Infinity Tech</p>
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+      <NavbarContent className="hidden md:flex gap-4" justify="center">
         <NavbarBrand>
           {/* <AcmeLogo /> */}
           
@@ -74,13 +75,19 @@ export default function NavBar() {
       </NavbarContent>
 
       <NavbarContent justify="end">
-        <NavbarItem className="hidden md:flex">
+        <NavbarItem className="flex">
           <Link href="">Login</Link>
         </NavbarItem>
         <NavbarItem>
           <Button as={Link} color="primary" href="#" variant="flat">
             Sign Up
           </Button>
+        </NavbarItem>
+        <NavbarItem>
+          <Cart>
+
+          </Cart>
+          
         </NavbarItem>
       </NavbarContent>
 

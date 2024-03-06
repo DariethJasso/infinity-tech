@@ -2,13 +2,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Divider, Input, Textarea, Button } from "@nextui-org/react"
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import CommentCard from "@/app/ui/contact/coments";
+import { Mapa } from "@/app/ui/main/Mapa";
 export default function Contact() {
     return (
         <div className="px-2 py-3">
             <Divider className="my-3"/>
-            <section className="flex flex-col gap-4 items-center">
+                <h1 className=" text-center text-3xl font-bold">CONTACT</h1>
+            <section className="flex flex-col sm:flex-row gap-4 items-center justify-center md:gap-10">
 
-                <h1 className="text-2xl font-bold">Contact</h1>
                 <form className="w-[300px] flex flex-col gap-4">
                     <Input
                         isRequired
@@ -42,7 +43,8 @@ export default function Contact() {
                             <FontAwesomeIcon icon={faPaperPlane} /> Send
                         </Button> 
                     
-                </form>
+                </form> 
+                <Mapa/>
             </section>
             <Divider className="my-3"/>
             <section className="w-auto"> 

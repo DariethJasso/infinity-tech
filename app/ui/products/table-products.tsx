@@ -34,10 +34,10 @@ export default function TableProducts() {
   
   return (
     <div className="gap-2 grid grid-cols-2 sm:grid-cols-4">
-      {products.map((item, index) => (
+      {products.map((item) => (
         
 
-        <Card shadow="sm" key={index} isPressable className="max-w-[250px]">
+        <Card shadow="sm" key={item.idproducts} isPressable className="max-w-[250px]">
           <CardBody className="overflow-visible p-0 ">
             <Image
               shadow="sm"
@@ -52,9 +52,9 @@ export default function TableProducts() {
             <div>
 
               <b>{item.name}</b>
-              <p className="text-default-500">{item.price}</p>
+              <p className="text-default-500">${item.price}.00</p>
             </div>
-            <ModalInfo name={item.name} description={item.description} price={item.price} image={item.image} rating={item.rating}/>
+            <ModalInfo idproducts={item.idproducts} name={item.name} description={item.description} price={item.price} image={item.image} rating={item.rating} quantity={item.quantity} category={item.category} />
           </CardFooter>
         </Card>
       ))}

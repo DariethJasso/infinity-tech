@@ -6,15 +6,20 @@ import axios from 'axios';
 
 export type DataGlobal = {
     products:Products[];
+    cart:Products[];
+    setCart:(cart:Products[])=>void
+   
 
 }
 const DataContext = createContext<DataGlobal>({
-    products:[]
+    products:[],
+    cart:[],
+    setCart:()=>{}
 });
 
  const DataProvider = ({children}:{children: React.ReactNode}) => {
-    const [products, setProducts] = useState([]);
-
+    const [products, setProducts] = useState<Products[]>([]);
+    const [cart,setCart] = useState<Products[]>([]);
     const fetchData = async () => {
         try {
             const {data} = await axios.get("https://1c7ftyevsd.execute-api.us-east-2.amazonaws.com/dev/products")
@@ -29,7 +34,11 @@ const DataContext = createContext<DataGlobal>({
     },[]);
 
     return (
-        <DataContext.Provider value={{products}}>
+        <DataContext.Provider value={{
+            products,
+            cart,
+            setCart
+            }}>
         {children}
         </DataContext.Provider>
     );
